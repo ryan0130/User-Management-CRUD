@@ -1,0 +1,13 @@
+
+
+.info-box {
+    background-color: #dedede;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.jumbotron {
+    padding: 48px 60px;
+}

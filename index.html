@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">CRUD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron bg-secondary text-white jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">User Management</h1>
+        <br>
+        <p class="lead">This User App is using Me Call Free REST API and 12 users are already provided by the API.<br>
+                        The 12 users that's already provided, won't allow you to edit or delete them.<br>
+                        Only users that is added from 13 and above can be modified.</p>
+        <p><em>For more details, please check out https://www.mecallapi.com/ to explore more information of its REST API</em></p>
+      </div>
+    </div>
+
+    <main class="container my-4">
+      <div class="row">
+        <div class="col-4">
+          <form id="myForm">
+            <h3><strong>Add User</strong></h3>
+            <h6><em>*Adding a user will start from ID 13 and so on</em></h6>
+            <div class="mb-3">
+              <label for="fname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fname">
+            </div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lname">
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Username</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form id="updateForm">
+            <h3><strong>Update User</strong></h3>
+            <h6><em>*Update a User ID starting from 13 and above</em></h6>
+            <div class="mb-3">
+              <label for="updateId" class="form-label">ID</label>
+              <input type="text" class="form-control" id="updateId" placeholder="Update a User ID from 13 and above">
+            </div>
+            <div class="mb-3">
+              <label for="updateFname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="updateFname">
+            </div>
+            <div class="mb-3">
+              <label for="updateLname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="updateLname">
+            </div>
+            <div class="mb-3">
+              <label for="updateUserName" class="form-label">Username</label>
+              <input type="text" class="form-control" id="updateUserName">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form id="deleteForm">
+            <h3><strong>Delete User</strong></h3>
+            <h6><em>*Delete a User ID starting from 13 and above</em></h6>
+            <div class="mb-3">
+              <label for="deleteId" class="form-label">ID</label>
+              <input type="text" class="form-control" id="deleteId" placeholder="Delete a User ID from 13 and above">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      
+      <div class="table">
+        <table class="table table-light table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Username</th>
+                </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+      </div>
+      <br>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
